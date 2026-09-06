@@ -9,7 +9,7 @@ interface BenefitsProps {
     title: string;
     desc: string;
     image: any;
-    bullets: {
+    bullets?: {
       title: string;
       desc: string;
       icon: React.ReactNode;
@@ -51,7 +51,7 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
           </div>
 
           <div className="w-full mt-5">
-            {data.bullets.map((item, index) => (
+            {data.bullets?.map((item, index) => (
               <Benefit key={index} title={item.title} icon={item.icon}>
                 {item.desc}
               </Benefit>
@@ -66,9 +66,9 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
 function Benefit(props: any) {
   return (
     <div className="flex items-start mt-8 space-x-3">
-      <div className="flex items-center justify-center flex-shrink-0 mt-1 bg-indigo-500 rounded-md w-11 h-11 ">
+      <div className="flex items-center justify-center flex-shrink-0 mt-1 bg-brand-primary rounded-md w-11 h-11 ">
         {React.cloneElement(props.icon, {
-          className: "w-7 h-7 text-indigo-50",
+          className: "w-7 h-7 text-white",
         })}
       </div>
       <div>

@@ -1,60 +1,70 @@
 import {
-  FaceSmileIcon,
-  ChartBarSquareIcon,
-  CursorArrowRaysIcon,
+  UserGroupIcon,
   DevicePhoneMobileIcon,
   AdjustmentsHorizontalIcon,
   SunIcon,
+  WrenchScrewdriverIcon,
+  HandThumbUpIcon,
 } from "@heroicons/react/24/solid";
 
-import benefitOneImg from "../../public/img/benefit-one.png";
-import benefitTwoImg from "../../public/img/benefit-two.png";
+import benefitOneImg from "../../public/img/benefit-1.jpg";
+import benefitTwoImg from "../../public/img/benefit-2.jpg";
 
 const benefitOne = {
-  title: "Highlight your benefits",
-  desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
+  title: "Our approach is simple",
+  desc: "Understand the client's requirements, recommend practical solutions, and provide reliable service that supports the long-term performance of their facilities.",
   image: benefitOneImg,
   bullets: [
     {
-      title: "Understand your customers",
-      desc: "Then explain the first point breifly in one or two lines.",
-      icon: <FaceSmileIcon />,
+      title: "Understand customers",
+      desc: "Tailor practical HVAC and air filtration solutions",
+      icon: <UserGroupIcon />,
     },
     {
-      title: "Improve acquisition",
-      desc: "Here you can add the next benefit point.",
-      icon: <ChartBarSquareIcon />,
+      title: "Maintenance and service",
+      desc: "Maintain clean, comfortable, safe, and  productive environments",
+      icon: <WrenchScrewdriverIcon />,
     },
     {
-      title: "Drive customer retention",
-      desc: "This will be your last bullet point in this section.",
-      icon: <CursorArrowRaysIcon />,
+      title: "Commitment and quality",
+      desc: "Deliver quality products and long-term value to every client",
+      icon: <HandThumbUpIcon />,
     },
   ],
 };
 
 const benefitTwo = {
-  title: "Offer more benefits here",
-  desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
+  title:
+    "From air filters and dust collector filters, to paintbooth maintenance and AC preventive maintenance",
+  desc: "LYA Dynamics aims to be a dependable partner for businesses that value air quality, equipment performance, and operational reliability.",
   image: benefitTwoImg,
-  bullets: [
-    {
-      title: "Mobile Responsive Template",
-      desc: "Nextly is designed as a mobile first responsive template.",
-      icon: <DevicePhoneMobileIcon />,
-    },
-    {
-      title: "Powered by Next.js & TailwindCSS",
-      desc: "This template is powered by latest technologies and tools.",
-      icon: <AdjustmentsHorizontalIcon />,
-    },
-    {
-      title: "Dark & Light Mode",
-      desc: "Nextly comes with a zero-config light & dark mode. ",
-      icon: <SunIcon />,
-    },
+};
+
+const airFilterServices = {
+  title: "Air Filtration",
+  items: [
+    "VAC Air Filters",
+    "Panel Filters",
+    "Pleated Filters",
+    "Bag Filters",
+    "HEPA Filters",
+    "Dust Collector Filters",
+    "Paintbooth Filters",
+    "Custom Filter Requirements",
   ],
 };
 
+const hvacServices = {
+  title: "HVAC Services",
+  items: [
+    "AC Preventive Maintenance",
+    "AC Cleaning & Servicing",
+    "Filter Replacement",
+    "HVAC System Support",
+    "Installation Services",
+    "Paintbooth Preventive Maintenance",
+    "Filtration System Assessment",
+  ],
+};
 
-export {benefitOne, benefitTwo};
+export { benefitOne, benefitTwo, airFilterServices, hvacServices };

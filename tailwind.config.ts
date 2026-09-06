@@ -15,6 +15,11 @@ const config: Config = {
     extend: {
       colors: {
         trueGray: colors.neutral,
+        brand: {
+          primary: "#0A709E",
+          dark: "#081A31",
+          muted: "#7E94A5",
+        },
       },
     },
     fontFamily: {

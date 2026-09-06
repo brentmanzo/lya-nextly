@@ -1,11 +1,20 @@
 "use client";
 import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
-import Image from "next/image";
-import { Disclosure, DisclosureButton } from "@headlessui/react";
+// import Image from "next/image";
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
 
 export const Navbar = () => {
-  const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
+  const navigation = [
+    { label: "Company", href: "#company" },
+    { label: "Services", href: "#services" },
+    { label: "FAQ", href: "#faq" },
+    { label: "Contact", href: "#contact" },
+  ];
 
   return (
     <div className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur dark:border-trueGray-800 dark:bg-trueGray-900/95">
@@ -13,7 +22,7 @@ export const Navbar = () => {
         {/* Logo  */}
         <Link href="/">
           <span className="brand-link">
-            <span>
+            {/* <span>
               <Image
                 src="/img/logo.svg"
                 width="32"
@@ -21,27 +30,27 @@ export const Navbar = () => {
                 height="32"
                 className="w-8"
               />
-            </span>
+            </span> */}
             <span>LYA Dynamics</span>
           </span>
         </Link>
 
         {/* get started  */}
-        <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
+        {/* <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
           <ThemeChanger />
           <div className="hidden mr-3 lg:flex nav__item">
             <Link href="/" className="btn-primary md:ml-5">
               Get Started
             </Link>
           </div>
-        </div>
+        </div> */}
 
         <Disclosure as="div">
           {({ open }) => (
             <>
               <DisclosureButton
                 aria-label="Toggle Menu"
-                className="px-2 py-1 text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
+                className="px-2 py-1 text-gray-500 rounded-md lg:hidden hover:text-brand-primary focus:text-brand-primary focus:bg-brand-primary/10 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
               >
                 <svg
                   className="w-6 h-6 fill-current"
@@ -64,15 +73,15 @@ export const Navbar = () => {
                 </svg>
               </DisclosureButton>
 
-              <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
+              <DisclosurePanel className="flex flex-wrap w-full my-5 lg:hidden">
                 <>
                   {navigation.map((item, index) => (
                     <Link
                       key={index}
-                      href="/"
+                      href={item.href}
                       className="nav-link -ml-4 dark:focus:bg-gray-800"
                     >
-                      {item}
+                      {item.label}
                     </Link>
                   ))}
                   <Link
@@ -82,7 +91,7 @@ export const Navbar = () => {
                     Get Started
                   </Link>
                 </>
-              </Disclosure.Panel>
+              </DisclosurePanel>
             </>
           )}
         </Disclosure>
@@ -93,10 +102,10 @@ export const Navbar = () => {
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
                 <Link
-                  href="/"
+                  href={menu.href}
                   className="nav-link inline-block text-lg font-normal text-gray-800 no-underline dark:text-gray-200 dark:focus:bg-gray-800"
                 >
-                  {menu}
+                  {menu.label}
                 </Link>
               </li>
             ))}
