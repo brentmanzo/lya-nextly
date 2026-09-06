@@ -41,7 +41,7 @@ export function DisclosureClient(props: Readonly<DisclosureClientProps>) {
       {({ open }) => (
         <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
           <Link href={logo.href || "/"}>
-            <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
+            <span className="brand-link">
               <span>
                 <Image
                   src={logo.image.url}
@@ -86,7 +86,7 @@ export function DisclosureClient(props: Readonly<DisclosureClientProps>) {
                 <Link
                   key={index}
                   href={item.href}
-                  className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
+                  className="nav-link -ml-4 dark:focus:bg-gray-800"
                 >
                   {item.text}
                 </Link>
@@ -94,7 +94,7 @@ export function DisclosureClient(props: Readonly<DisclosureClientProps>) {
               <Link
                 href={cta.href}
                 target={cta.external ? "_blank" : "_self"}
-                className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
+                className="btn-primary mt-3 w-full text-center lg:ml-5"
               >
                 {cta.text}
               </Link>

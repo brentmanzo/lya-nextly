@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer base {
   html,
   body {
@@ -11,3 +9,44 @@
   }
 }
 
+@layer components {
+  .brand-link {
+    @apply flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100;
+  }
+
+  .nav-link {
+    @apply w-full rounded-md px-4 py-2 text-gray-500 hover:text-indigo-500 focus:bg-indigo-100 focus:text-indigo-500 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700;
+  }
+
+  .btn-primary {
+    @apply rounded-md bg-indigo-600 px-6 py-2 text-white;
+  }
+
+  .section-eyebrow {
+    @apply text-sm font-bold uppercase tracking-wider text-indigo-600;
+  }
+
+  .section-heading {
+    @apply mt-3 max-w-2xl text-3xl font-bold leading-snug tracking-tight text-gray-800 dark:text-white lg:text-4xl lg:leading-tight;
+  }
+
+  .section-description {
+    @apply max-w-2xl py-4 text-lg leading-normal text-gray-500 dark:text-gray-300 lg:text-xl xl:text-xl;
+  }
+
+  .testimonial-card {
+    @apply flex h-full w-full flex-col justify-between rounded-2xl bg-gray-100 px-14 py-14 dark:bg-trueGray-800;
+  }
+
+  .form-input {
+    @apply w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-gray-600 placeholder-gray-300 focus:border-indigo-600 focus:outline-none focus:ring focus:ring-indigo-100;
+  }
+
+  .form-error {
+    @apply mt-1 text-sm text-red-400;
+  }
+
+  .btn-submit {
+    @apply w-full rounded-md bg-indigo-500 px-3 py-4 text-white focus:bg-indigo-600 focus:outline-none;
+  }
+}

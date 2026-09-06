@@ -8,11 +8,11 @@ export const Navbar = () => {
   const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
 
   return (
-    <div className="w-full">
+    <div className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur dark:border-trueGray-800 dark:bg-trueGray-900/95">
       <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-1">
         {/* Logo  */}
         <Link href="/">
-          <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
+          <span className="brand-link">
             <span>
               <Image
                 src="/img/logo.svg"
@@ -22,7 +22,7 @@ export const Navbar = () => {
                 className="w-8"
               />
             </span>
-            <span>Nextly</span>
+            <span>LYA Dynamics</span>
           </span>
         </Link>
 
@@ -30,10 +30,7 @@ export const Navbar = () => {
         <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
           <ThemeChanger />
           <div className="hidden mr-3 lg:flex nav__item">
-            <Link
-              href="/"
-              className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
-            >
+            <Link href="/" className="btn-primary md:ml-5">
               Get Started
             </Link>
           </div>
@@ -73,14 +70,14 @@ export const Navbar = () => {
                     <Link
                       key={index}
                       href="/"
-                      className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
+                      className="nav-link -ml-4 dark:focus:bg-gray-800"
                     >
                       {item}
                     </Link>
                   ))}
                   <Link
                     href="/"
-                    className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
+                    className="btn-primary mt-3 w-full text-center lg:ml-5"
                   >
                     Get Started
                   </Link>
@@ -97,7 +94,7 @@ export const Navbar = () => {
               <li className="mr-3 nav__item" key={index}>
                 <Link
                   href="/"
-                  className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
+                  className="nav-link inline-block text-lg font-normal text-gray-800 no-underline dark:text-gray-200 dark:focus:bg-gray-800"
                 >
                   {menu}
                 </Link>

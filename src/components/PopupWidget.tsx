@@ -164,14 +164,14 @@ export function PopupWidget() {
                             required: "Full name is required",
                             maxLength: 80,
                           })}
-                          className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
+                          className={`form-input ${
                             errors.name
-                              ? "border-red-600 focus:border-red-600 ring-red-100"
-                              : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
+                              ? "border-red-600 focus:border-red-600 focus:ring-red-100"
+                              : ""
                           }`}
                         />
                         {errors.name && (
-                          <div className="mt-1 text-sm text-red-400 invalid-feedback">
+                          <div className="form-error invalid-feedback">
                             {errors.name.message as string}
                           </div>
                         )}
@@ -195,15 +195,15 @@ export function PopupWidget() {
                             },
                           })}
                           placeholder="you@company.com"
-                          className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
+                          className={`form-input ${
                             errors.email
-                              ? "border-red-600 focus:border-red-600 ring-red-100"
-                              : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
+                              ? "border-red-600 focus:border-red-600 focus:ring-red-100"
+                              : ""
                           }`}
                         />
 
                         {errors.email && (
-                          <div className="mt-1 text-sm text-red-400 invalid-feedback">
+                          <div className="form-error invalid-feedback">
                             {errors.email.message as string}
                           </div>
                         )}
@@ -224,24 +224,21 @@ export function PopupWidget() {
                             required: "Enter your Message",
                           })}
                           placeholder="Your Message"
-                          className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md h-28 focus:outline-none focus:ring   ${
+                          className={`form-input h-28 ${
                             errors.message
-                              ? "border-red-600 focus:border-red-600 ring-red-100"
-                              : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
+                              ? "border-red-600 focus:border-red-600 focus:ring-red-100"
+                              : ""
                           }`}
                           required
                         ></textarea>
                         {errors.message && (
-                          <div className="mt-1 text-sm text-red-400 invalid-feedback">
+                          <div className="form-error invalid-feedback">
                             {errors.message.message as string}
                           </div>
                         )}
                       </div>
                       <div className="mb-3">
-                        <button
-                          type="submit"
-                          className="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
-                        >
+                        <button type="submit" className="btn-submit">
                           {isSubmitting ? (
                             <svg
                               className="w-5 h-5 mx-auto text-white animate-spin"
