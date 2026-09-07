@@ -38,7 +38,8 @@ export default function Home() {
           So, don&apos;t forget to add one. Just like this.
         </SectionTitle>
 
-        <Video videoId="4P_4wMF38aU" />
+        {/* PROMO VIDEO */}
+        {/* <Video videoId="4P_4wMF38aU" /> */}
         <Services
           title={airFilterServices.title}
           items={airFilterServices.items}
@@ -46,7 +47,7 @@ export default function Home() {
         <Services title={hvacServices.title} items={hvacServices.items} />
       </div>
 
-      <SectionTitle
+      {/* <SectionTitle
         preTitle="Testimonials"
         title="Here's what our customers said"
       >
@@ -54,7 +55,7 @@ export default function Home() {
         Use this section to highlight your popular customers.
       </SectionTitle>
 
-      <Testimonials />
+      <Testimonials /> */}
 
       <div id="faq" className="scroll-mt-32">
         <SectionTitle preTitle="FAQ" title="Frequently Asked Questions">

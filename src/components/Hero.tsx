@@ -61,7 +61,8 @@ export const Hero = () => {
           </div>
         </div>
       </Container>
-      <Container>
+      {/* PARTNER LOGOS */}
+      {/* <Container>
         <div className="flex flex-col justify-center">
           <div className="text-xl text-center text-gray-700 dark:text-white">
             Trusted by <span className="text-brand-primary">2000+</span>{" "}
@@ -86,7 +87,7 @@ export const Hero = () => {
             </div>
           </div>
         </div>
-      </Container>
+      </Container> */}
     </>
   );
 };
