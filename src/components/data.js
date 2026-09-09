@@ -43,7 +43,7 @@ const benefitTwo = {
 const airFilterServices = {
   title: "Air Filtration",
   items: [
-    "VAC Air Filters",
+    "HVAC Air Filters",
     "Panel Filters",
     "Pleated Filters",
     "Bag Filters",

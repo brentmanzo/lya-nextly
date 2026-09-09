@@ -49,11 +49,11 @@ export default function Home() {
 
         {/* PROMO VIDEO */}
         {/* <Video videoId="4P_4wMF38aU" /> */}
-        <Services title={hvacServices.title} items={hvacServices.items} />
         <Services
           title={airFilterServices.title}
           items={airFilterServices.items}
         />
+        <Services title={hvacServices.title} items={hvacServices.items} />
       </div>
 
       {/* <SectionTitle
