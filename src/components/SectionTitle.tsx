@@ -22,7 +22,7 @@ export const SectionTitle = (props: Readonly<SectionTitleProps>) => {
       {props.title && <h2 className="section-heading">{props.title}</h2>}
 
       {props.children && (
-        <p className="section-description">{props.children}</p>
+        <div className="section-description">{props.children}</div>
       )}
     </Container>
   );
