@@ -4,9 +4,9 @@
 
 @layer base {
   :root {
-    --color-brand-primary: #0a709e;
-    --color-brand-dark: #081a31;
-    --color-brand-muted: #7e94a5;
+    --color-brand-primary: #1e3246;
+    --color-brand-dark: #325073;
+    --color-brand-muted: #96b4dc;
   }
 
   html,
@@ -16,12 +16,26 @@
 }
 
 @layer components {
+  .font-garamond {
+    font-family: var(--font-cormorant-garamond), serif;
+  }
+
   .brand-link {
-    @apply flex items-center space-x-2 text-2xl font-medium text-brand-primary dark:text-white;
+    @apply flex items-center space-x-2 text-2xl font-garamond font-medium text-brand-primary dark:text-white;
   }
 
   .nav-link {
-    @apply w-full rounded-md px-4 py-2 text-brand-muted hover:text-brand-primary focus:bg-brand-primary/10 focus:text-brand-primary focus:outline-none dark:text-gray-300 dark:focus:bg-white/10;
+    @apply w-full rounded-md px-4 py-2 text-brand-muted focus:outline-none dark:text-gray-300 dark:focus:bg-white/10;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .nav-link:hover {
+      @apply bg-brand-primary/10 text-brand-primary;
+    }
+
+    .navbar-toggle:hover {
+      @apply text-brand-primary bg-brand-primary/10;
+    }
   }
 
   .btn-primary {

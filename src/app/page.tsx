@@ -16,11 +16,11 @@ import {
 import Services from "@/components/Services";
 export default function Home() {
   return (
-    <Container>
+    <Container className="pt-0">
       <Hero />
       <div id="company" className="scroll-mt-32">
         <SectionTitle
-          preTitle="LYA Dynamics"
+          // preTitle="LYA Dynamics"
           title="Your trusted partner for air filtration solutions"
         >
           We provide air filtration products, HVAC products, filter
@@ -33,18 +33,27 @@ export default function Home() {
 
       <div id="services" className="scroll-mt-32">
         <SectionTitle preTitle="Our services" title="What we can do for you">
-          This section is to highlight a promo or demo video of your product.
-          Analysts says a landing page with video has 3% more conversion rate.
-          So, don&apos;t forget to add one. Just like this.
+          <div className="flex flex-col gap-3">
+            <span className="section-eyebrow normal-case">
+              Cleaner Air. Better Comfort. Reliable HVAC Solutions.
+            </span>
+            <span className="mt-4">
+              At LYA Dynamics, we provide practical HVAC and air filtration
+              solutions designed to help businesses maintain cleaner air,
+              comfortable working environments, and reliable equipment
+              performance.
+            </span>
+          </div>
         </SectionTitle>
+        <div className="section-eyebrow normal-case items-center"></div>
 
         {/* PROMO VIDEO */}
         {/* <Video videoId="4P_4wMF38aU" /> */}
+        <Services title={hvacServices.title} items={hvacServices.items} />
         <Services
           title={airFilterServices.title}
           items={airFilterServices.items}
         />
-        <Services title={hvacServices.title} items={hvacServices.items} />
       </div>
 
       {/* <SectionTitle

@@ -13,8 +13,8 @@ export function Footer() {
   return (
     <div className="relative">
       <Container>
-        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-4">
-          <div className="lg:col-span-2">
+        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-3">
+          <div className="mx-auto lg:mx-0 lg:col-span-2">
             <div>
               {" "}
               <Link href="/" className="brand-link">
@@ -28,15 +28,15 @@ export function Footer() {
                 <span>LYA Dynamics</span>
               </Link>
             </div>
-
-            <div className="flex max-w-md flex-col gap-1 mt-4 text-gray-500 dark:text-gray-400">
-              <span>6412 Ivory, Taguig City</span>
-              <span>+63 962 4525 974</span>
-              <span>lya-dynam1cs@outlook.com</span>
-            </div>
+          </div>
+          <div className="flex items-center lg:items-end flex-col gap-1 mt-4 text-gray-500 dark:text-gray-400">
+            <span>6412 Ivory, Taguig City</span>
+            <span>+63 962 4525 974</span>
+            <span>lya-dynam1cs@outlook.com</span>
           </div>
 
-          <div>
+          {/* NAV links at footer */}
+          {/* <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {navigation.map((item, index) => (
                 <Link key={index} href={item.href} className="nav-link">
@@ -44,7 +44,9 @@ export function Footer() {
                 </Link>
               ))}
             </div>
-          </div>
+          </div> */}
+
+          {/* LEGAL links */}
           {/* <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {legal.map((item, index) => (
@@ -54,7 +56,9 @@ export function Footer() {
               ))}
             </div>
           </div> */}
-          <div className="">
+
+          {/* SOCIALS at footer */}
+          {/* <div className="">
             <div>Follow us</div>
             <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
               <a
@@ -86,7 +90,7 @@ export function Footer() {
                 <Linkedin />
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
